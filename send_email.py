@@ -1,11 +1,12 @@
 import smtplib, ssl
+from decouple import config
 
 
 def send_email(message):
     host = "smtp.gmail.com"
     port = 465
-    username = "justinsmall1171@gmail.com"
-    password = "brnpkwfzrhjlbrmo"
+    username = config('username', default='')
+    password = config('password', default='')
     receiver = "justinsmall1171@gmail.com"
     context = ssl.create_default_context()
 
