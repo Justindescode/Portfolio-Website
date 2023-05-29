@@ -2,6 +2,7 @@ import smtplib, ssl
 from decouple import config
 
 
+
 def send_email(message):
     host = "smtp.gmail.com"
     port = 465
